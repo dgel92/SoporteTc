@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    box-sizing: border-box;
+    list-style:none;
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.nav li{
+    display:block;
+    padding: 5px 5px;
+    border-radius: 10px;
+    
+}
+
+.nav li:hover{
+    background-color:rgb(77, 56, 56);
+    font-size: 1.3rem;
+}
+
+.nav>li{
+    float:left;
+}
+
+.nav li ul{
+    display:none;
+    position: absolute;
+    min-width: 20px;
+    z-index: 1;
+}
+
+.nav li:hover> ul{
+    display:block;
+}
+
+.nav li ul li{
+    position: relative;
+}
+
+.nav li ul li ul {
+    background-color: rgb(17, 24, 40);
+    left: 8.5vh;
+    top: 0px;
+}
+
+.desplegable{
+    background-color: rgb(17, 24, 40);
+    display:flex;
+    left: 32vh;
+    top: 12.5vh;
+    & li ul li ul link{
+        left: 200px;
+
+    }
+}
+
+.header{
+    display:flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+    text-decoration: none;
+    background-color: rgb(17, 24, 40);
+    
+}
+
+.logo{
+    display:flex;
+    width: 100%;
+}
+
+
+.logo_img{
+    display:flex;
+    margin-left: 40%;
+    margin-right: 38%
+}
+
+.categorias{
+    display:flex;
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    margin-left: 9vh;
+    &:hover{
+        display:flex;
+        border: 3px solid rgb(128, 128, 128);
+        background-color: rgb(17, 24, 40);
+        font-size: 1.3rem;
+        margin-left: 9vh;
+    }
+}
+
+.link{
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+
+}

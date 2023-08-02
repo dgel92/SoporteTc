@@ -1,0 +1,10 @@
+/*abstracts*/
+@use "./componentes/scss/abstracts/variables";
+@use "./componentes/scss/abstracts/mixins";
+@use "./componentes/scss/abstracts/servicioReducido";
+@use "./componentes/scss/abstracts/linksUtiles";
+@use "./componentes/scss/abstracts/Cbs";
+
+/*base*/
+@use "./componentes/scss/base/reset";
+@use "./componentes/scss/base/base"

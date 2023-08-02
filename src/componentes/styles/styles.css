@@ -1,0 +1,13 @@
+.card-container{
+    display:flex;
+    width: 80%;
+    height: 200px;
+    justify-content: center;
+    margin-left: 10%;
+    border:2px solid red;
+}
+
+.button1{
+    padding-left: 20px;
+    padding-right: 20px;
+}
