@@ -1,25 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
+import CmHfc from "../Media/Img/cmHFC.png"
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import DecoSerializable from "../Media/Img/DecosSerializable.png"
+import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
+import OntSerializable from "../Media/Img/OntSerializable.png"
+import PendienteDeInstalacion from "../../componentes/Media/Img/pendienteDeInstalacion.png"
+import PendienteDeInstalacion2 from "../../componentes/Media/Img/pendienteDeInstalacion2.png"
+import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import fan from "../Media/Img/fan.png"
-import CmHfc from "../Media/Img/cmHFC.png"
-import OntSerializable from "../Media/Img/OntSerializable.png"
-import DecoSerializable from "../Media/Img/DecosSerializable.png"
 
 function FANEsperaDeEjecucion() {
     return (
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-            <Image src={Image} fluid />
-            <Accordion.Header >Instalado o service con cambio de modem o decos con orden en "Espera de Ejecucion”</Accordion.Header>
+        <Image src={PendienteDeInstalacion} fluid />;
+        <br/>
+        <br/>
+            <Accordion.Header >INSTALADOS FISICAMENTE PERO SIN ACTIVACIÓN O EN ESPERA DE EJECUCION- FAN</Accordion.Header>
                 <Accordion.Body>
                 Sucede en instalaciones o service que al termino de cerrar la orden o hay una contingencia activa en las herramientas del tecnico, por omision no se cerro la orden o quedaron mal serializados (mal cargado MAC o serial number) de los equipos nuevos que quedaron en el domicilio del cliente.
                 <br/>
@@ -131,8 +136,8 @@ function FANEsperaDeEjecucion() {
                         <td>
                         <br/>
                         Para el caso de los decodificadores (Ya sea Flow / HD / Digital / Arion) el dato que se necesita del equipo es el Número de Serie (SN).<br/>                     
-                          <br/>     
-                          <br/>     
+                            <br/>     
+                            <br/>     
                         El número de serie del decodificador está compuesto de la siguiente manera:<br/><br/>
 
                         -Flow Deco Android modelo HP40: HP40xxxxxxxxx<br/>
@@ -181,31 +186,7 @@ function FANEsperaDeEjecucion() {
             <Accordion.Body>
                 <Table striped bordered hover size="sm">
                 
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                        <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                        <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
+                <Image src={PendienteDeInstalacion} fluid />;
 
                 </Table>
             </Accordion.Body>

@@ -1,6 +1,6 @@
 import './NavBar.scss';
-import Inicio from "../Media/Img/Inicio.png"
 
+import Inicio from "../Media/Img/Inicio.png"
 import { Link } from "react-router-dom";
 
 function NavBar(){
@@ -11,8 +11,8 @@ function NavBar(){
         <div class="dropdown">
           <button class="dropbtn">FAN</button>
           <div class="dropdown-content">
-            <Link to="/FAN/ServicioReducido">SERVICIO REDUCIDO POR MORA SIN SALDO PENDIENTE (Servicio Reducido sin deuda + 48hs)</Link>
-            <Link to="FAN/EsperaDeEjecucion">Instalado o service con cambio de modem o decos con orden en "Espera de Ejecucion”</Link>
+            <Link to="/FAN/ServicioReducido">Servicio reducido por mora sin saldo pendiente (Servicio Reducido sin deuda + 48hs)</Link>
+            <Link to="FAN/EsperaDeEjecucion">Instalado fisicamente pero sin activacion o en espera de ejecucion - FAN</Link>
             <Link to="FAN/ErrorDeAgenda">Error de agenda sin caso relacionado</Link>
             <Link to="FAN/ErrorDeAgenda">Cambio de domicilio con error en FAN</Link>
             <Link to="FAN/ErrorDeAgenda">Sin reduccion en 360° pero "Reduccion" solamente en Codi</Link>
@@ -23,20 +23,20 @@ function NavBar(){
         <div class="dropdown">
           <button class="dropbtn">OPEN</button>
           <div class="dropdown-content">
-            <a href="#">I-TRACKER: Adelanto y aseguramiento de agenda</a>
-            <a href="#">Posible Masivo</a>
-            <a href="#">OT a cerrar</a>
-            <a href="#">OT a anular</a>
-            <a href="#">Solicitud pendiente</a>
-            <a href="#">Reduccion de servicio en OPEN</a>
-            <a href="#">Pase a redes</a>
-            <a href="#">Servicio suspendido en CCIP recurrentemente</a>
-            <a href="#">FTTH Error equipos (ccip/pendiente)</a>
-            <a href="#">Reducido en open sin deuda</a>
+            <Link to="/Open/AdelantoAseguramiento">I-TRACKER: Adelanto y aseguramiento de agenda</Link>
+            <Link to="/">Posible Masivo</Link>
+            <Link to="/">OT a cerrar</Link>
+            <Link to="/">OT a anular</Link>
+            <Link to="/">Solicitud pendiente</Link>
+            <Link to="/">Reduccion de servicio en OPEN</Link>
+            <Link to="/">Pase a redes</Link>
+            <Link to="/">Servicio suspendido en CCIP recurrentemente</Link>
+            <Link to="/">FTTH Error equipos (ccip/pendiente)</Link>
+            <Link to="/">Reducido en open sin deuda</Link>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">CBS</button>
+          <button class="dropbtn">CBS-C</button>
           <div class="dropdown-content">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>

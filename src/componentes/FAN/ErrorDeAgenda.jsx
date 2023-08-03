@@ -1,17 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
+import CmHfc from "../Media/Img/cmHFC.png"
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import DecoSerializable from "../Media/Img/DecosSerializable.png"
+import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
+import OntSerializable from "../Media/Img/OntSerializable.png"
+import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import fan from "../Media/Img/fan.png"
-import CmHfc from "../Media/Img/cmHFC.png"
-import OntSerializable from "../Media/Img/OntSerializable.png"
-import DecoSerializable from "../Media/Img/DecosSerializable.png"
 
 function FANErrorDeAgenda() {
     return (
@@ -19,6 +20,8 @@ function FANErrorDeAgenda() {
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
             <Image src={Image} fluid />
+            <br/>
+            <br/>
             <Accordion.Header >Error de Agenda sin caso aparente o relacionado</Accordion.Header>
                 <Accordion.Body>
                 Sucede en instalaciones o service que al termino de cerrar la orden o hay una contingencia activa en las herramientas del tecnico, por omision no se cerro la orden o quedaron mal serializados (mal cargado MAC o serial number) de los equipos nuevos que quedaron en el domicilio del cliente.

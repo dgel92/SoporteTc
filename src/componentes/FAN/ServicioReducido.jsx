@@ -1,11 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 import fan from "../Media/Img/fan.png"
-import Image from 'react-bootstrap/Image';
 import reducido from "../../componentes/Media/Img/ServicioReducido1.png"
 
 function FanservicioReducido() {
@@ -13,7 +14,9 @@ function FanservicioReducido() {
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-            <Image src={reducido} fluid />;
+            <Image src={reducido} fluid />
+            <br/>
+            <br/>
             <Accordion.Header >Servicio reducido por mora sin saldo pendiente (Reducido sin deuda + 48hs)</Accordion.Header>
                 <Accordion.Body>
                 Estamos contactando a los clientes que tienen facturas vencidas hace mas de 25 días, para informales que de no regularizar la cuenta, procederemos a una reducción técnica del servicio para con ello asegurarle que pueda seguir conectado y comunicado. Para evitar esa reducción del servicio te pedimos abonar las facturas pendientes.<br/><br/>
