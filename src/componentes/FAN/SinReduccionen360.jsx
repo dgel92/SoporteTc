@@ -7,7 +7,7 @@ import ImagenPendiente from "../Media/Img/imagenPendiente.jpg"
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 
-function CambioDomicilioErrorFan() {
+function SinReduccionEn360() {
     return (
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
@@ -146,4 +146,4 @@ function CambioDomicilioErrorFan() {
     );
 }
 
-export default CambioDomicilioErrorFan;
+export default SinReduccionEn360;

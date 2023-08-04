@@ -13,6 +13,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import Open from "./componentes/Open/Open";
 import OpenAdelanto from "./componentes/Open/OpenAdelanto";
 import Portada from "./componentes/Portada/portada";
+import SinReduccionEn360 from "./componentes/FAN/SinReduccionen360";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/FAN/EsperaDeEjecucion" element={<FANEsperaDeEjecucion/>} />
             <Route path="/FAN/ErrorDeAgenda" element={<FANErrorDeAgenda/>} />
             <Route path="/Fan/cambioDomicilioErroFan" element={<CambioDomicilioErrorFan/>} />
+            <Route path="/Fan/SinReduccionen360" element={<SinReduccionEn360/>} />
 
             
             <Route path="/Fan/InstaladoOService" element={<Fan/>} />
