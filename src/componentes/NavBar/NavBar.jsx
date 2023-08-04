@@ -1,5 +1,3 @@
-import './NavBar.scss';
-
 import Inicio from "../Media/Img/Inicio.png"
 import { Link } from "react-router-dom";
 
@@ -14,7 +12,7 @@ function NavBar(){
             <Link to="/FAN/ServicioReducido">Servicio reducido por mora sin saldo pendiente (Servicio Reducido sin deuda + 48hs)</Link>
             <Link to="FAN/EsperaDeEjecucion">Instalado fisicamente pero sin activacion o en espera de ejecucion - FAN</Link>
             <Link to="FAN/ErrorDeAgenda">Error de agenda sin caso relacionado</Link>
-            <Link to="FAN/ErrorDeAgenda">Cambio de domicilio con error en FAN</Link>
+            <Link to="FAN/cambioDomicilioErroFan">Cambio de domicilio con error en FAN</Link>
             <Link to="FAN/ErrorDeAgenda">Sin reduccion en 360° pero "Reduccion" solamente en Codi</Link>
             <Link to="FAN/ErrorDeAgenda"># I-TRACKER: Adelanto y aseguramiento de agenda</Link>
             <Link to="FAN/ErrorDeAgenda">Servicio suspendido en CCIP recurrentement</Link>

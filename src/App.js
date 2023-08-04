@@ -2,6 +2,7 @@ import "./App.scss"
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import CambioDomicilioErrorFan from "./componentes/FAN/cambioDeDomicilioErrorFan";
 import Cbs from "./componentes/Cbs/Cbs";
 import FANErrorDeAgenda from "./componentes/FAN/ErrorDeAgenda";
 import FANEsperaDeEjecucion from "./componentes/FAN/EsperaDeEjecucion";
@@ -25,13 +26,14 @@ function App() {
             <Route path="/FAN/ServicioReducido" element={<FanservicioReducido/>} />
             <Route path="/FAN/EsperaDeEjecucion" element={<FANEsperaDeEjecucion/>} />
             <Route path="/FAN/ErrorDeAgenda" element={<FANErrorDeAgenda/>} />
-
+            <Route path="/Fan/cambioDomicilioErroFan" element={<CambioDomicilioErrorFan/>} />
 
             
             <Route path="/Fan/InstaladoOService" element={<Fan/>} />
             <Route path="/Fan/ErrorAgenda" element={<Fan/>} />
             <Route path="/Fan/cambio" element={<Cbs/>} />
             <Route path="/Fan/SinReduccion360" element={<Fan/>} />
+            
 
 
 

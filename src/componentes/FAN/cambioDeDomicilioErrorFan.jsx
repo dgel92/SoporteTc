@@ -8,35 +8,38 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import DecoSerializable from "../Media/Img/DecosSerializable.png"
 import Image from 'react-bootstrap/Image';
+import ImagenPendiente from "../Media/Img/imagenPendiente.jpg"
 import { Link } from "react-router-dom";
 import OntSerializable from "../Media/Img/OntSerializable.png"
 import PendienteDeInstalacion from "../../componentes/Media/Img/pendienteDeInstalacion.png"
 import PendienteDeInstalacion2 from "../../componentes/Media/Img/pendienteDeInstalacion2.png"
 import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
-import fan from "../Media/Img/fan.png"
 
-function FANEsperaDeEjecucion() {
+function CambioDomicilioErrorFan() {
     return (
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-        <div className='img-procedimientos'><Image src={PendienteDeInstalacion} fluid /></div>;
+        <div className='img-procedimientos'><Image src={ImagenPendiente} fluid /></div>;
         <br/>
         <br/>
-            <Accordion.Header >INSTALADOS FISICAMENTE PERO SIN ACTIVACIÓN O EN ESPERA DE EJECUCION- FAN</Accordion.Header>
+            <Accordion.Header >CAMBIO DE DOMICILIO ERROR FAN </Accordion.Header>
                 <Accordion.Body>
-                Sucede en instalaciones o service que al termino de cerrar la orden o hay una contingencia activa en las herramientas del tecnico, por omision no se cerro la orden o quedaron mal serializados (mal cargado MAC o serial number) de los equipos nuevos que quedaron en el domicilio del cliente.
+                Existe un incidente en algunas localidades, donde la orden viaja con tecnologia de domicilio destino erronea, impidiendo la instalacion al momento de la visita del tecnico.<br/>
+                Hasta que no se solucione, verifica que la localidad que indica el cliente esta en el listado que veras en el siguiente enlace.
                 <br/>
                 <br/>
-                Esta gestión aplica únicamente cuando:<br/><br/>
-                - No coincide la MAC del CM / SN ONT instalado en el domicilio del cliente con el que figura en OPEN/FAN/CODI.<br/>
-                - No coincide SN del Decodificador instalado en el domicilio del cliente con el SN registrado en OPEN/FAN/CODI.<br/>
-                - Equipo dado de baja por error, se necesita activar en CRM.
+                <button href="https://basedeconocimientos.custhelp.com/euf/assets/Nplay/TrasladoLocalidadesAfectadasFAN.htm">Listado de localidades</button>
                 <br/>
                 <br/>
-                Verificar<br/>
-                Que el equipo no se encuentre instalado en otro domicilio. De ser así debemos indicarle que el equipo solo se puede utilizar en el domicilio que figura registrado en sistema. En caso que nos informe que se mudó se deberá gestionar un TRASLADO DE PRODUCTO.<br/>    La MAC / SN ONT / SN Deco del equipo a reclamar, sea la correcta (ver opciones a continuación).
+                Si se encuentra afectado:<br/><br/>
+                -Informale al cliente que se debe generar una nueva venta para asegurar la prefactivilidad y servicios disponibles en la zona (brinda 0800 y whatsapp para que generen nueva venta).
+                -Ingresa al pedido desde relacionado, genera la cancelacion o baja del pedido, en caso que no cuentes con los permisos para cancelar el pedido deja un comentario en la orden informando el caso.
+                <br/>
+                <br/>
+                Si no se encuentra afectado:<br/><br/>
+                -Procede con el cambio de domicilio normalmente.
                 <br/>
                 <br/>
                 </Accordion.Body>
@@ -44,35 +47,28 @@ function FANEsperaDeEjecucion() {
         <Accordion.Item eventKey="1">
             <Accordion.Header>Flujo en Base de conocimiento</Accordion.Header>
             <Accordion.Body>
-            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/3934/kw/espera%20de%20ejecucion">Procedimiento Serializables, haz click!</Link></Button>
+            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/10889/kw/fan">Procedimiento Cambio de domicilio, haz click!</Link></Button>
             </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-            <Accordion.Header>Planilla CM HFC</Accordion.Header>
+            <Accordion.Header>Caso 1 - Cambio de domicilio en ejecucion - Aun no realizado.</Accordion.Header>
             <Accordion.Body>
-                <Col xs={6} md={4}>
-                    <Image src={CmHfc} roundedCircle />
-                </Col>
+            <div className='img-procedimientos'><Image src={ImagenPendiente} fluid /></div>
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla CM</th>
+                        <th>Caso 1 - Cambio de domicilio en ejecucion - aun no realizado</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        La MAC del CM está compuesta por 12 dígitos y es Hexadecimal (1 al 9 y A al F)<br/>
-                        NO confundir la MAC de un equipo con el número de serie. <br/><br/>                         
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        - Verificar con el cliente los datos del domicilio y en el pedido de cambio de domicilio ver los datos cargados.<br/>
+                        - En el pedido de cambio de domicilio hay un caso de venta o cambio de domicilio relacionado en el cual puedes ver la fecha de cita o su estado.<br/><br/>                         
+
+                        - Si el cliente informa que los datos estan mal (los productos) o el domicilio esta mal, brindar 0800 y whatsapp para que se comunique con mudanzas.<br/>  
+                        - En el caso de que no tenga cita programada agendar y ante cualquier error seguir flujo de error de agenda.
+                        
                             </td>
                         </tr>
                     </tbody>
@@ -82,37 +78,21 @@ function FANEsperaDeEjecucion() {
 
 
         <Accordion.Item eventKey="3">
-            <Accordion.Header>Planilla ONT</Accordion.Header>
+            <Accordion.Header>Caso 2 - Cambio de domicilio en ejecucion - Fue el tecnico y informo domicilio incorrecto.</Accordion.Header>
             <Accordion.Body>
-                    <Image src={OntSerializable} fluid />
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla ONT</th>
+                        <th>Fue el tecnico y informo domicilio incorrecto</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        Para el caso del servicio de FTTH, es necesario solicitarle al cliente el SN de la ONT (NO la MAC).<br/>
+                        Verificar el estado de la orden en casos, deberia haber una reserva de cita. Haz click sobre ella y veras la OT del caso y su cierre informado por el tecnico.<br/>
+                        Si esta cerrada o anulada por motivo domicilio incorrecto. Al igual que el caso anterior informarle al cliente que se comunique con mudanzas o venta.
 
-                        El SN de las ONT actuales puede estar compuesto de la siguiente manera:<br/><br/>
-
-                        - ALCLBxxxxxxxxx<br/>
-                        - 54454xxxxxxxxxx<br/>
-                        - E0CC7xxxxxxxxx<br/>
-                        - 4857xxxxxxxxxxx<br/>
-                        - 04A22xxxxxxxxx<br/><br/>
-                    
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        
                             </td>
                         </tr>
                     </tbody>
@@ -122,7 +102,7 @@ function FANEsperaDeEjecucion() {
 
 
         <Accordion.Item eventKey="4">
-            <Accordion.Header>Planilla Decodificadores</Accordion.Header>
+            <Accordion.Header>Caso 3 - Cambio de domicilio realizado pero no aparece en vista 360 y sigue en espera de ejecucion.</Accordion.Header>
             <Accordion.Body>
             <Image src={DecoSerializable} fluid />
                 <Table striped bordered hover size="xl">
@@ -196,4 +176,4 @@ function FANEsperaDeEjecucion() {
     );
 }
 
-export default FANEsperaDeEjecucion;
+export default CambioDomicilioErrorFan;

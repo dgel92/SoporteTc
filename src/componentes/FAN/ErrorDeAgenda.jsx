@@ -7,6 +7,12 @@ import CmHfc from "../Media/Img/cmHFC.png"
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import DecoSerializable from "../Media/Img/DecosSerializable.png"
+import ErrorAgenda from "../Media/Img/errorAgendaSinCasoAparente.png"
+import ErrorAgenda1 from "../Media/Img/caso1-erroragenda.png"
+import ErrorAgenda2 from "../Media/Img/caso1-erroragenda2.png"
+import ErrorAgendacaso2 from "../Media/Img/caso2-erroragenda.png"
+import ErrorAgendacaso3 from "../Media/Img/caso3-erroragenda.png"
+import ErrorAgendacaso4 from "../Media/Img/caso4-erroragenda.png"
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import OntSerializable from "../Media/Img/OntSerializable.png"
@@ -19,8 +25,8 @@ function FANErrorDeAgenda() {
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-            <Image src={Image} fluid />
             <br/>
+            <div className='img-procedimientos'><Image src={ErrorAgenda} fluid /></div>
             <br/>
             <Accordion.Header >Error de Agenda sin caso aparente o relacionado</Accordion.Header>
                 <Accordion.Body>
@@ -42,177 +48,162 @@ function FANErrorDeAgenda() {
         <Accordion.Item eventKey="1">
             <Accordion.Header>Flujo en Base de conocimiento</Accordion.Header>
             <Accordion.Body>
-            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/3934/kw/espera%20de%20ejecucion">Procedimiento Serializables, haz click!</Link></Button>
+            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/10301/kw/fan%20error%20agenda#gs=eyJndWlkZUlEIjo0NTc0LCJxdWVzdGlvbklEIjoxLCJyZXNwb25zZUlEIjoyMSwiZ3VpZGVTZXNzaW9uIjoiYXFVZTVPZHEiLCJzZXNzaW9uSUQiOiJGSVFiNU9kcSJ9">Procedimiento Error de Agendas en FAN, haz click!</Link></Button>
             </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-            <Accordion.Header>Planilla CM HFC</Accordion.Header>
+            <Accordion.Header>Caso - 1 No hay agenda disponible</Accordion.Header>
             <Accordion.Body>
-                <Col xs={6} md={4}>
-                    <Image src={CmHfc} roundedCircle />
-                </Col>
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla CM</th>
+                        <th>No hay agenda disponible</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        La MAC del CM está compuesta por 12 dígitos y es Hexadecimal (1 al 9 y A al F)<br/>
-                        NO confundir la MAC de un equipo con el número de serie. <br/><br/>                         
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                            
+                        En casos de venta - cambio de domicilio - asistencia tecnica va a quedar como pendiente de contacto<br/><br/>
+                        - Verifica en relacionado sobre el caso y vas a visualizar el caso derivado automaticamente y quedara en estado de "derivada" y callback se contactara con el cliente.
+                        <br/>
+                        - En el caso a la izquierda veras los detalles del caso y el id del itracker que se generara automaticamente y este numero de derivacion se lo puedes brindar al cliente.
+                        <br/>
+                        <br/>
+                        - <b>IMPORTANTE</b>, si ves que no se genero el caso relacionado debes tabular de la siguiente forma:<br/>
+                        * Error en gestiones<br/>
+                        * NPLAY Fija<br/>
+                        * Selecciona la opcion Gestion Citas<br/><br/>
+                        - Genera un itracker de aseguramiento de citas.<br/>
                             </td>
                         </tr>
                     </tbody>
+                    <br/>
+                    <div className='img-procedimientos'><Image src={ErrorAgenda1} fluid /></div>
+                    <br/><tr/>
+                    <div className='img-procedimientos'><Image src={ErrorAgenda2} fluid /></div>
                 </Table>
             </Accordion.Body>
         </Accordion.Item>
 
 
         <Accordion.Item eventKey="3">
-            <Accordion.Header>Planilla ONT</Accordion.Header>
+            <Accordion.Header>Caso - 2 Error de agenda por Time out</Accordion.Header>
             <Accordion.Body>
-                    <Image src={OntSerializable} fluid />
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla ONT</th>
+                        <th>Error de agenda por Time out</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        Para el caso del servicio de FTTH, es necesario solicitarle al cliente el SN de la ONT (NO la MAC).<br/>
+                        En este caso aunque veas que te quedan segundos en la programacion de la cita, recuerda que FAN necesita guardar y enviar los datos y a veces se demora y quedas fuera del tiempo que brinda la agenda.
+                        <br/>
+                        Debes buscar el caso generado por la asistencia tecnica que estara pendiente de contacto, boton crear cita y intenta agendar la orden tecnica.<br/><br/>
 
-                        El SN de las ONT actuales puede estar compuesto de la siguiente manera:<br/><br/>
-
-                        - ALCLBxxxxxxxxx<br/>
-                        - 54454xxxxxxxxxx<br/>
-                        - E0CC7xxxxxxxxx<br/>
-                        - 4857xxxxxxxxxxx<br/>
-                        - 04A22xxxxxxxxx<br/><br/>
-                    
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        Si te sigue dando error genera un itracker con la siguiente ruta: <br/>
+                        - Fan / Salesforce<br/>
+                        - Seleccione Una Opcion: Error En Gestiones<br/>
+                        - Seleccione Una Opcion: Nplay Fija<br/>
+                        - Seleccione Una Opción: Gestion De Citas.
                             </td>
                         </tr>
                     </tbody>
+                    <br/>
+                    <div className='img-procedimientos'><Image src={ErrorAgendacaso3} fluid /></div>
                 </Table>
             </Accordion.Body>
         </Accordion.Item>
 
 
         <Accordion.Item eventKey="4">
-            <Accordion.Header>Planilla Decodificadores</Accordion.Header>
+            <Accordion.Header>Caso - 3 No se guardaron los datos necesarios para continuar con la gestion</Accordion.Header>
             <Accordion.Body>
-            <Image src={DecoSerializable} fluid />
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla Decodificadores</th>
+                        <th>No se guardaron los datos necesarios para continuar con la gestion</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        <br/>
-                        Para el caso de los decodificadores (Ya sea Flow / HD / Digital / Arion) el dato que se necesita del equipo es el Número de Serie (SN).<br/>                     
-                          <br/>     
-                          <br/>     
-                        El número de serie del decodificador está compuesto de la siguiente manera:<br/><br/>
+                        También deberá ser reportado como incidente (Itracker),  cuando no se genere el caso hijo de “Sin agenda disponible”.<br/><br/>
 
-                        -Flow Deco Android modelo HP40: HP40xxxxxxxxx<br/>
-                        -Flow Deco Android modelo HP44: HP44xxxxxxxxx<br/>
-                        -Flow Full IP Sagemcom: 31xxxxxxxxxxx<br/>
-                        -Flow Box (DX4220/DCX4400): Mxxxxxxxxx<br/>
+                        Si te sigue dando error genera un itracker con la siguiente ruta: <br/>
+                        - Fan / Salesforce<br/>
+                        - Seleccione Una Opcion: Error En Gestiones<br/>
+                        - Seleccione Una Opcion: Nplay Fija<br/>
+                        - Seleccione Una Opción: Gestion De Citas.<br/><br/>
 
-                        -Deco Clasico HD ISDBT (Comivision CV2514) CDVxxxxxxxx<br/>
-                        -Deco HD Motorola (DCX4220/DCX3210): Mxxxxxxxxx<br/>
-                        -Deco HD Pace: PAERxxxxxxx / PACxxxxx<br/>
-                        -Deco HD Pace DVR: PAATxxxxxxxxx<br/>
-                        -Deco Digital DCT/DTA  Mxxxxxxxxx<br/>
-
-                        -Deco Arion: <br/>
-                        -MCL-xxxx-xxxxx<br/>
-                        -CVN-xxxx-xxxxx<br/>
-
-                        -Deco Kaon: 2056xxxxxxx<br/><br/>
- 
-                        En el caso de solicitarle al cliente el número de serie en la etiqueta del equipo, este puede aparecer de la siguiente forma:
-                        <br/><br/>
-                        - S/N<br/>
-                        - SN<br/>
-                        - SN HOST:<br/>
-                        - HOST SN:<br/><br/>
-                                
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        <b>IMPORTANTE</b>: en los caso de venta, continuar con el proceso hasta confirmar el pedido.
                             </td>
                         </tr>
                     </tbody>
+                    <div className='img-procedimientos'><Image src={ErrorAgendacaso2} fluid /></div>
                 </Table>
             </Accordion.Body>
         </Accordion.Item>
-
 
         <Accordion.Item eventKey="5">
-            <Accordion.Header>Ejemplos</Accordion.Header>
+            <Accordion.Header>Caso - 4 Ha ocurrido un error al consultar la agenda</Accordion.Header>
             <Accordion.Body>
-                <Table striped bordered hover size="sm">
-                
-                    <Carousel slide={false}>
-                        <Carousel.Item>
-                        <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                        <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    </Carousel>
+                <Table striped bordered hover size="xl">
+                    <thead>
+                        <tr>
+                        <th>Ha ocurrido un error al consultar la agenda, porfavor reintenta desde Crear Cita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                        Ante este error, ingresar al Caso Padre e ir al botón de Crear Cita para llevar a cabo la agenda.<br/><br/>
 
+                        Si te sigue dando error genera un itracker con la siguiente ruta: <br/>
+                        - Fan / Salesforce<br/>
+                        - Seleccione Una Opcion: Error En Gestiones<br/>
+                        - Seleccione Una Opcion: Nplay Fija<br/>
+                        - Seleccione Una Opción: Gestion De Citas.<br/><br/>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <div className='img-procedimientos'><Image src={ErrorAgendacaso4} fluid /></div>
                 </Table>
             </Accordion.Body>
-        </Accordion.Item>
+            </Accordion.Item>
+        
+
+            <Accordion.Item eventKey="6">
+            <Accordion.Header>Planillas</Accordion.Header>
+            <Accordion.Body>
+                <Table striped bordered hover size="xl">
+                    <thead>
+                        <tr>
+                        <th>Planilla - Error de agenda sin caso relacionado y Itracker de agenda FAN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                        U:<br/>
+                        N° cuenta:<br/>
+                        Caso:<br/>
+                        OT:<br/>
+                        Direccion, loc, prov, partido:<br/>
+                        Detalle:<br/>
+                        Mail:<br/>
+                        Tel:<br/>
+                        Captura del error
+                            </td>
+                        </tr>
+                    </tbody>                    
+                </Table>
+            </Accordion.Body>
+            <br/><br/>
+            </Accordion.Item>
+
     </Accordion>
     </div>
     );

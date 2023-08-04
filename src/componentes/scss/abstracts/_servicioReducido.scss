@@ -1,4 +1,18 @@
+$colorPrincipal: rgb(44, 51, 51);
+
 .cardFAN{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
     padding: 20px 100px 20px 100px;
+    background-color: $colorPrincipal;
     
+}
+
+.img-procedimientos{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
 }

@@ -3,7 +3,7 @@ function MediosDeContactos(){
         <section className="text-gray-700 body-font">
             <div className="container px-2 py-10 mx-auto">
                 <div className="flex flex-col text-center w-full mb-10">
-                    <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Medios de contactos</h1>
+                    <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900 linksUtiles-titulo">Medios de contactos</h1>
                 </div>
                 <div className="lg:w-2/3 w-full mx-auto overflow-auto medioDeContacto-Container">
                 <table className="table-auto w-full text-left whitespace-no-wrap">

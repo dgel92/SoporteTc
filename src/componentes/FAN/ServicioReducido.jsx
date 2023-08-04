@@ -14,7 +14,7 @@ function FanservicioReducido() {
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-            <Image src={reducido} fluid />
+            <div className='img-procedimientos'><Image src={reducido} fluid /></div>
             <br/>
             <br/>
             <Accordion.Header >Servicio reducido por mora sin saldo pendiente (Reducido sin deuda + 48hs)</Accordion.Header>
