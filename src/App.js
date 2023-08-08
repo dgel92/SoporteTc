@@ -12,8 +12,11 @@ import Informacion from "./componentes/Informacion/informacion";
 import NavBar from './componentes/NavBar/NavBar';
 import Open from "./componentes/Open/Open";
 import OpenAdelanto from "./componentes/Open/OpenAdelanto";
+import OtAnularCerrar from "./componentes/Open/OtAnularCerrar";
 import Portada from "./componentes/Portada/portada";
+import PosibleMasivo from './componentes/Open/posibleMaviso';
 import SinReduccionEn360 from "./componentes/FAN/SinReduccionen360";
+import SuspendidoRecurrenteCCIP from "./componentes/FAN/SuspendidoRecurrenteCCIP";
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
             <Route path="/FAN/ErrorDeAgenda" element={<FANErrorDeAgenda/>} />
             <Route path="/Fan/cambioDomicilioErroFan" element={<CambioDomicilioErrorFan/>} />
             <Route path="/Fan/SinReduccionen360" element={<SinReduccionEn360/>} />
+            <Route path="/Fan/SuspendidoRecurrenteCCIP" element={<SuspendidoRecurrenteCCIP/>} />
 
             
             <Route path="/Fan/InstaladoOService" element={<Fan/>} />
@@ -42,6 +46,8 @@ function App() {
 
             <Route path="/Open" element={<Open/>} />
             <Route path="/Open/AdelantoAseguramiento" element={<OpenAdelanto/>} />
+            <Route path="/Open/PosibleMasivo" element={<PosibleMasivo/>} />
+            <Route path="/Open/OtAnularCerrar" element={<OtAnularCerrar/>} />
 
 
 

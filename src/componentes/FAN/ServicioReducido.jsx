@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import ejemplo1 from "../../componentes/Media/Img/EjemploServicioSuspendido.png"
+import ejemplo2 from "../../componentes/Media/Img/ejemploServicioSuspendido2.png"
 import fan from "../Media/Img/fan.png"
 import reducido from "../../componentes/Media/Img/ServicioReducido1.png"
 
@@ -78,30 +80,20 @@ function FanservicioReducido() {
                 
                     <Carousel slide={false}>
                         <Carousel.Item>
-                        <img src={fan} />
+                        <img src={ejemplo1} />
                             <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
-                        <img src={fan} />
+                        <img src={ejemplo2} />
                             <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        <Carousel.Item>
-                            <img src={fan} />
-                            <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
-                            </Carousel.Caption>
-                        </Carousel.Item>
                     </Carousel>
-
                 </Table>
             </Accordion.Body>
         </Accordion.Item>

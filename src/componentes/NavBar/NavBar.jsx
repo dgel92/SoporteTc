@@ -14,17 +14,15 @@ function NavBar(){
             <Link to="FAN/ErrorDeAgenda">Error de agenda sin caso relacionado - Itracker Agenda FAN</Link>
             <Link to="FAN/cambioDomicilioErroFan">Cambio de domicilio con error en FAN</Link>
             <Link to="FAN/SinReduccionen360">Sin reduccion en 360° pero "Reduccion" solamente en Codi</Link>
-            <Link to="FAN/ErrorDeAgenda">Servicio suspendido en CCIP recurrentement</Link>
+            <Link to="FAN/SuspendidoRecurrenteCCIP">Servicio suspendido en CCIP recurrentemente</Link>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">OPEN</button>
           <div class="dropdown-content">
             <Link to="/Open/AdelantoAseguramiento">I-TRACKER: Adelanto y aseguramiento de agenda</Link>
-            <Link to="/">Posible Masivo</Link>
-            <Link to="/">OT a cerrar</Link>
-            <Link to="/">OT a anular</Link>
-            <Link to="/">Solicitud pendiente</Link>
+            <Link to="/Open/PosibleMasivo">Posible Masivo</Link>
+            <Link to="/Open/OtAnularCerrar">OT a anular - cerrar - solicitud pendiente</Link>
             <Link to="/">Reduccion de servicio en OPEN</Link>
             <Link to="/">Pase a redes</Link>
             <Link to="/">Servicio suspendido en CCIP recurrentemente</Link>

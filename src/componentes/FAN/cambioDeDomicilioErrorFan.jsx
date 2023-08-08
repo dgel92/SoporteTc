@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import ImagenPendiente from "../Media/Img/imagenPendiente.jpg"
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import cambioDomicilio from "../Media/Img/CambioDeDomicilio.png"
 
 function CambioDomicilioErrorFan() {
     return (
@@ -13,7 +14,7 @@ function CambioDomicilioErrorFan() {
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
             <br/>
-        <div className='img-procedimientos'><Image src={ImagenPendiente} fluid /></div>;
+        <div className='img-procedimientos'><Image src={cambioDomicilio} fluid /></div>;
         <br/>
         <br/>
             <Accordion.Header >CAMBIO DE DOMICILIO ERROR FAN </Accordion.Header>
