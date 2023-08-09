@@ -16,7 +16,7 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import fan from "../Media/Img/fan.png"
 
-function FANEsperaDeEjecucion() {
+function ReduccionOpen() {
     return (
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
@@ -25,21 +25,9 @@ function FANEsperaDeEjecucion() {
         <div className='img-procedimientos'><Image src={PendienteDeInstalacion} fluid /></div>;
         <br/>
         <br/>
-            <Accordion.Header >INSTALADOS FISICAMENTE PERO SIN ACTIVACIÓN O EN ESPERA DE EJECUCION- FAN</Accordion.Header>
+            <Accordion.Header >Reduccion en OPEN </Accordion.Header>
                 <Accordion.Body>
-                Sucede en instalaciones o service que al termino de cerrar la orden o hay una contingencia activa en las herramientas del tecnico, por omision no se cerro la orden o quedaron mal serializados (mal cargado MAC o serial number) de los equipos nuevos que quedaron en el domicilio del cliente.
-                <br/>
-                <br/>
-                Esta gestión aplica únicamente cuando:<br/><br/>
-                - No coincide la MAC del CM / SN ONT instalado en el domicilio del cliente con el que figura en OPEN/FAN/CODI.<br/>
-                - No coincide SN del Decodificador instalado en el domicilio del cliente con el SN registrado en OPEN/FAN/CODI.<br/>
-                - Equipo dado de baja por error, se necesita activar en CRM.
-                <br/>
-                <br/>
-                Verificar<br/>
-                Que el equipo no se encuentre instalado en otro domicilio. De ser así debemos indicarle que el equipo solo se puede utilizar en el domicilio que figura registrado en sistema. En caso que nos informe que se mudó se deberá gestionar un TRASLADO DE PRODUCTO.<br/>    La MAC / SN ONT / SN Deco del equipo a reclamar, sea la correcta (ver opciones a continuación).
-                <br/>
-                <br/>
+                --
                 </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
@@ -197,4 +185,4 @@ function FANEsperaDeEjecucion() {
     );
 }
 
-export default FANEsperaDeEjecucion;
+export default ReduccionOpen;

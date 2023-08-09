@@ -15,6 +15,7 @@ import OpenAdelanto from "./componentes/Open/OpenAdelanto";
 import OtAnularCerrar from "./componentes/Open/OtAnularCerrar";
 import Portada from "./componentes/Portada/portada";
 import PosibleMasivo from './componentes/Open/posibleMaviso';
+import ReduccionOpen from "./componentes/Open/ReduccionOpen";
 import SinReduccionEn360 from "./componentes/FAN/SinReduccionen360";
 import SuspendidoRecurrenteCCIP from "./componentes/FAN/SuspendidoRecurrenteCCIP";
 
@@ -48,6 +49,7 @@ function App() {
             <Route path="/Open/AdelantoAseguramiento" element={<OpenAdelanto/>} />
             <Route path="/Open/PosibleMasivo" element={<PosibleMasivo/>} />
             <Route path="/Open/OtAnularCerrar" element={<OtAnularCerrar/>} />
+            <Route path="/Open/ReduccionOpen" element={<ReduccionOpen/>} />
 
 
 

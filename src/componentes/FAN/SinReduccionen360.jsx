@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import ImagenPendiente from "../Media/Img/imagenPendiente.jpg"
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import reduccion360 from "../Media/Img/soloReduccion360.png"
 
 function SinReduccionEn360() {
     return (
@@ -13,7 +14,7 @@ function SinReduccionEn360() {
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
             <br/>
-        <div className='img-procedimientos'><Image src={ImagenPendiente} fluid /></div>;
+        <div className='img-procedimientos'><Image src={reduccion360} fluid /></div>;
         <br/>
         <br/>
             <Accordion.Header >Sin reduccion en vista 360° pero "Reduccion" solamente en Codi</Accordion.Header>
@@ -31,41 +32,30 @@ function SinReduccionEn360() {
             </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-            <Accordion.Header>Servicio reducido solo en FAN-CODI / Cliente HFC</Accordion.Header>
+            <Accordion.Header>Servicio reducido solo asistencia Tecnica CODI FAN</Accordion.Header>
             <Accordion.Body>
             <div className='img-procedimientos'><Image src={ImagenPendiente} fluid /></div>
                 <Table striped bordered hover size="xl">
                     <thead>
+                        En estos casos, veremos un bullet o todos en rojo y nos informaran de una suspension o reduccion de servicio, esto se debe a errores de gestiones dentro de la plataforma NPLAY, al momento de eliminar la suspension en la cuenta del cliente, no se genera un recalculo en los servicio del cliente por decirlo de alguna manera. <br/><br/>
+                        Podemos realizar un recalculo a nivel del servicio afectado, pedirle al cl que desconecte los equipos y hacer un reset factory o pedirle al cl que lo haga en caso que codi no nos habilite.
+                        Si en el caso que haciendo esto siga suspendido, tenemos que proceder a cargar la siguiente planilla como itracker:
+                        <br/><br/>
                         <tr>
-                        <th>Cliente HFC</th>
+                        <th>Planilla - Sin reduccion en 360° pero "Reduccion" solamente en Codi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        ---
-                        
-                            </td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </Accordion.Body>
-        </Accordion.Item>
-
-
-        <Accordion.Item eventKey="3">
-            <Accordion.Header>Servicio reducido solo en FAN-CODI / Cliente FTTH</Accordion.Header>
-            <Accordion.Body>
-                <Table striped bordered hover size="xl">
-                    <thead>
-                        <tr>
-                        <th>Cliente FTTH</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>
-                        ---
+                                u:<br/>
+                                Nº de cuenta:<br/>
+                                Orden - Caso:<br/>
+                                Direccion (localidad, partido, provincia):<br/>
+                                detalle:<br/>
+                                Mail:<br/>
+                                Telefono de contacto:<br/>
+                                Adjuntar capturas de resumen de cuenta y de la vista 360<br/>
                             </td>
                         </tr>
                     </tbody>

@@ -23,7 +23,7 @@ function NavBar(){
             <Link to="/Open/AdelantoAseguramiento">I-TRACKER: Adelanto y aseguramiento de agenda</Link>
             <Link to="/Open/PosibleMasivo">Posible Masivo</Link>
             <Link to="/Open/OtAnularCerrar">OT a anular - cerrar - solicitud pendiente</Link>
-            <Link to="/">Reduccion de servicio en OPEN</Link>
+            <Link to="/Open/ReduccionOpen">Reduccion de servicio en OPEN</Link>
             <Link to="/">Pase a redes</Link>
             <Link to="/">Servicio suspendido en CCIP recurrentemente</Link>
             <Link to="/">FTTH Error equipos (ccip/pendiente)</Link>
@@ -31,11 +31,13 @@ function NavBar(){
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">CBS-C</button>
+          <button class="dropbtn">Servicios</button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">FTTH</a>
+            <a href="#">HFC</a>
+            <a href="#">Flow</a>
+            <a href="#">Fibermail</a>
+            <a href="#">Personal wifi zone</a>
           </div>
         </div>
       </section>

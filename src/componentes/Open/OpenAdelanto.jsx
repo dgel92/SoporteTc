@@ -21,10 +21,9 @@ function OpenAdelanto() {
         <div className='cardFAN'>
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
-        <Image src={AdelantoOpen} fluid />;
         <br/>
-        <br/>
-        
+        <div className='img-procedimientos'><Image src={AdelantoOpen} fluid /></div>
+        <br/>        
             <Accordion.Header >I-TRACKER: Adelanto y aseguramiento de agenda</Accordion.Header>
                 <Accordion.Body>
                 Sucede en pedidos de instalacion o service tecnico que al momento de citar la orden no hay fechas proximas o errores en la aplicacion de agenda, por lo cual cargando este itracker solicitamos que se adelante y confirme un turno con el cliente.<br/>

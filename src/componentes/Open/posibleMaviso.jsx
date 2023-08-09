@@ -16,6 +16,8 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import TeDeLaImagen from "../Media/Img/imagenPendiente.jpg"
 import fan from "../Media/Img/fan.png"
+import masivo from "../Media/Img/posibleMasivo.png"
+import masivo2 from "../Media/Img/posibleMasivo2.png"
 
 function PosibleMasivo() {
     return (
@@ -23,7 +25,7 @@ function PosibleMasivo() {
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
         <br/>
-        <Image src={TeDeLaImagen} fluid />;
+        <div className='img-procedimientos'><Image src={TeDeLaImagen} fluid /></div>
         <br/>
         <br/>
             <Accordion.Header >Posible Masivo</Accordion.Header>
@@ -75,12 +77,9 @@ function PosibleMasivo() {
             <Accordion.Header>Ejemplos</Accordion.Header>
             <Accordion.Body>
                 <Table striped bordered hover size="sm">
-                <Image src={TeDeLaImagen} fluid />
-                <tr>
-                        <th></th>
-                        </tr>
-
-
+                <br/>
+                <div className='img-procedimientos'><Image src={masivo2} fluid /></div>
+                <br/>
                 </Table>
             </Accordion.Body>
         </Accordion.Item>
