@@ -13,6 +13,7 @@ import NavBar from './componentes/NavBar/NavBar';
 import Open from "./componentes/Open/Open";
 import OpenAdelanto from "./componentes/Open/OpenAdelanto";
 import OtAnularCerrar from "./componentes/Open/OtAnularCerrar";
+import PaseARedes from "./componentes/Open/PaseARedes";
 import Portada from "./componentes/Portada/portada";
 import PosibleMasivo from './componentes/Open/posibleMaviso';
 import ReduccionOpen from "./componentes/Open/ReduccionOpen";
@@ -50,6 +51,7 @@ function App() {
             <Route path="/Open/PosibleMasivo" element={<PosibleMasivo/>} />
             <Route path="/Open/OtAnularCerrar" element={<OtAnularCerrar/>} />
             <Route path="/Open/ReduccionOpen" element={<ReduccionOpen/>} />
+            <Route path="/Open/PaseARedes" element={<PaseARedes/>} />
 
 
 

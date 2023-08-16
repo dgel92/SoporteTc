@@ -24,7 +24,7 @@ function NavBar(){
             <Link to="/Open/PosibleMasivo">Posible Masivo</Link>
             <Link to="/Open/OtAnularCerrar">OT a anular - cerrar - solicitud pendiente</Link>
             <Link to="/Open/ReduccionOpen">Reduccion de servicio en OPEN</Link>
-            <Link to="/">Pase a redes</Link>
+            <Link to="/Open/PaseARedes">Pase a redes</Link>
             <Link to="/">Servicio suspendido en CCIP recurrentemente</Link>
             <Link to="/">FTTH Error equipos (ccip/pendiente)</Link>
             <Link to="/">Reducido en open sin deuda</Link>

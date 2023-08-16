@@ -14,7 +14,10 @@ import PendienteDeInstalacion from "../../componentes/Media/Img/pendienteDeInsta
 import PendienteDeInstalacion2 from "../../componentes/Media/Img/pendienteDeInstalacion2.png"
 import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
-import fan from "../Media/Img/fan.png"
+import imagenPendiente from "../Media/Img/imagenPendiente.jpg"
+import reduccionOpen1 from "../Media/Img/reduccionOPEN1.png"
+import reduccionOpen2 from "../Media/Img/reduccionOPEN2.png"
+import reduccionOpen3 from "../Media/Img/reduccionOPEN3.png"
 
 function ReduccionOpen() {
     return (
@@ -22,46 +25,41 @@ function ReduccionOpen() {
     <Accordion defaultActiveKey="0" flush>
         <Accordion.Item eventKey="0">
             <br/>
-        <div className='img-procedimientos'><Image src={PendienteDeInstalacion} fluid /></div>;
+        <div className='img-procedimientos'><Image src={imagenPendiente} fluid /></div>;
         <br/>
         <br/>
             <Accordion.Header >Reduccion en OPEN </Accordion.Header>
                 <Accordion.Body>
-                --
+                Este inconveniente ocurre cuando el cliente tuvo una deuda y realizo el pago o genero una refinanciacion pero el servicio sigue suspendido o con el pup pop de servicio reducido en OPEN.<br/>
+                Puede ser que en CODI, los bullet salgan con el servicio reducido o no, como tambien en OPEN yendo a componentes del producto, podemos ver activo aun el servicio reducido en el servicio del cliente.
                 </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
             <Accordion.Header>Flujo en Base de conocimiento</Accordion.Header>
             <Accordion.Body>
-            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/3934/kw/espera%20de%20ejecucion">Procedimiento Serializables, haz click!</Link></Button>
+            <Button variant="outline-secondary"><Link to="https://basedeconocimientos.custhelp.com/app/answers/detail/a_id/4231/kw/reducido">Procedimiento Servicio Suspendido - Reducido, haz click!</Link></Button>
             </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-            <Accordion.Header>Planilla CM HFC</Accordion.Header>
+            <Accordion.Header>Planilla - Contrato reducido sin deuda por pago/ajuste</Accordion.Header>
             <Accordion.Body>
-                <Col xs={6} md={4}>
-                    <Image src={CmHfc} roundedCircle />
-                </Col>
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla CM</th>
+                        <th>Contrato reducido sin deuda por pago/ajuste</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        La MAC del CM está compuesta por 12 dígitos y es Hexadecimal (1 al 9 y A al F)<br/>
-                        NO confundir la MAC de un equipo con el número de serie. <br/><br/>                         
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        Si el cliente tiene un contrato reducido sin deuda por pago/ajuste, no será necesario que cargues el manifiesto de pago.Escalá estos casos al Callback completando correctamente la planilla con los siguientes datos:
+                        <br/>      
+                            - ID (DNI del cliente):<br/>
+                            - Contrato:<br/>
+                            - Tel:<br/>
+                            - Motivo: ACTIVAR SERVICIO-REDUCIDO SIN DEUDA-EXCLUIR DEL CIRCUITO DE REDUCCIÓN<br/>
+                            - Componente afectado: (Deco, Cablemodem, Flow App, etc)<br/>
+                            - Pop Up en Open: SI/NO<br/>                  
                             </td>
                         </tr>
                     </tbody>
@@ -71,39 +69,39 @@ function ReduccionOpen() {
 
 
         <Accordion.Item eventKey="3">
-            <Accordion.Header>Planilla ONT</Accordion.Header>
+            <Accordion.Header>Planilla - Contrato reducido CON deuda, pero con ajuste pendiente.</Accordion.Header>
             <Accordion.Body>
-                    <Image src={OntSerializable} fluid />
+                    <Image src={imagenPendiente} fluid />
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla ONT</th>
+                        <th>Contrato reducido CON deuda, pero con ajuste pendiente.</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
-                        Para el caso del servicio de FTTH, es necesario solicitarle al cliente el SN de la ONT (NO la MAC).<br/>
+                        En los casos de reducción con ajuste pendiente por:<br/><br/>
+                            -Financiación no aplicada<br/>
+                            -Ajuste Legales<br/>
+                            -Ajuste Reclamo Facturación<br/>
+                            -Pago no impactado<br/><br/>
 
-                        El SN de las ONT actuales puede estar compuesto de la siguiente manera:<br/><br/>
+                            Se deberá:<br/><br/>
+                            -Cargar Manifiesto de Pago para restauración a nivel contrato .<br/>
+                            -Enviar mail a la casilla Gestión de Mora para exclusión de acciones de morosidad.<br/>
+                            <br/>
+                            En el margen inferior derecho (PROCESOS DE CONTRATOS) se encuentran una serie de acciones. Seleccionar la opción REGISTRO DE PLAZO DE SUSPENSIÓN                                             
+                            <br/><br/>
+                            La leyenda “El proceso terminó con éxito” indica que se restablecerá el servicio en 60 minutos.
 
-                        - ALCLBxxxxxxxxx<br/>
-                        - 54454xxxxxxxxxx<br/>
-                        - E0CC7xxxxxxxxx<br/>
-                        - 4857xxxxxxxxxxx<br/>
-                        - 04A22xxxxxxxxx<br/><br/>
-                    
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                            En Open, el pop up de servicio reducido demorará poco más de una hora en desaparecer.
+
+                            En el caso de ser contrato PDX (Pendiente de Desconexión), la activación es inmediata.
                             </td>
                         </tr>
+                        <Image src={reduccionOpen1} fluid /><br/><br/>
+                        <Image src={reduccionOpen2} fluid />
                     </tbody>
                 </Table>
             </Accordion.Body>
@@ -111,60 +109,34 @@ function ReduccionOpen() {
 
 
         <Accordion.Item eventKey="4">
-            <Accordion.Header>Planilla Decodificadores</Accordion.Header>
+            <Accordion.Header>Planilla - Servicio reducido en OPEN sin Deuda </Accordion.Header>
             <Accordion.Body>
-            <Image src={DecoSerializable} fluid />
+            <Image src={imagenPendiente} fluid />
                 <Table striped bordered hover size="xl">
                     <thead>
                         <tr>
-                        <th>Planilla Decodificadores</th>
+                        <th>Servicio reducido en OPEN sin Deuda</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                         <td>
                         <br/>
-                        Para el caso de los decodificadores (Ya sea Flow / HD / Digital / Arion) el dato que se necesita del equipo es el Número de Serie (SN).<br/>                     
-                            <br/>     
-                            <br/>     
-                        El número de serie del decodificador está compuesto de la siguiente manera:<br/><br/>
+                        Para clientes con servicio reducido sin deuda (verificar en OPEN que el Cliente no tenga deuda) y verificar que no este en portal cautivo:<br/><br/>
+                        Si no tiene deuda o indicios de una, se deberá:<br/><br/>
+                        -Enviar mail a la casilla Gestión de Moras solo para exclusión de acciones de morosidad.<br/>
+                        -Cargar ITracker para la restauración del servicio completando la siguiente planilla:<br/><br/>
 
-                        -Flow Deco Android modelo HP40: HP40xxxxxxxxx<br/>
-                        -Flow Deco Android modelo HP44: HP44xxxxxxxxx<br/>
-                        -Flow Full IP Sagemcom: 31xxxxxxxxxxx<br/>
-                        -Flow Box (DX4220/DCX4400): Mxxxxxxxxx<br/>
-
-                        -Deco Clasico HD ISDBT (Comivision CV2514) CDVxxxxxxxx<br/>
-                        -Deco HD Motorola (DCX4220/DCX3210): Mxxxxxxxxx<br/>
-                        -Deco HD Pace: PAERxxxxxxx / PACxxxxx<br/>
-                        -Deco HD Pace DVR: PAATxxxxxxxxx<br/>
-                        -Deco Digital DCT/DTA  Mxxxxxxxxx<br/>
-
-                        -Deco Arion: <br/>
-                        -MCL-xxxx-xxxxx<br/>
-                        -CVN-xxxx-xxxxx<br/>
-
-                        -Deco Kaon: 2056xxxxxxx<br/><br/>
- 
-                        En el caso de solicitarle al cliente el número de serie en la etiqueta del equipo, este puede aparecer de la siguiente forma:
-                        <br/><br/>
-                        - S/N<br/>
-                        - SN<br/>
-                        - SN HOST:<br/>
-                        - HOST SN:<br/><br/>
-                                
-                                u:<br/>
-                                Nº de cuenta:<br/>
-                                Orden - Caso:<br/>
-                                OT:<br/>
-                                Direccion (localidad, direccion, numeracion):<br/>
-                                Detalle:<br/>
-                                Mail:<br/>
-                                Telefono de contacto:<br/>
-                                Adjuntar captura de caso en espera de ejecucion<br/>
+                        -Número de Cliente:<br/>
+                        -DNI / CUIL / CUIT:<br/>
+                        -Contrato:<br/>
+                        -Telefono Operador:<br/>
+                        -Detalle el incidente  gestión/ consulta:<br/>
+                        -CAPTURA:<br/>                        
                             </td>
                         </tr>
                     </tbody>
+                    <Image src={reduccionOpen3} fluid />
                 </Table>
             </Accordion.Body>
         </Accordion.Item>
@@ -175,7 +147,7 @@ function ReduccionOpen() {
             <Accordion.Body>
                 <Table striped bordered hover size="sm">
                 
-                <Image src={PendienteDeInstalacion} fluid />;
+                <Image src={imagenPendiente} fluid />;
 
                 </Table>
             </Accordion.Body>

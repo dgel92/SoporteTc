@@ -58,7 +58,7 @@ function MediosDeContactos(){
                         </td>
                     </tr>
                     <tr>
-                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Whatsapp - Visita tecnica</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Whatsapp - Visita tecnica y consultas</td>
                         <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">1171950001</td>
                         <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">-</td>
                         <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">24hrs</td>
@@ -66,10 +66,18 @@ function MediosDeContactos(){
                         </td>
                     </tr>
                     <tr>
-                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Whatsapp - Consultas</td>
-                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">1171950002</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Whatsapp - decos comprados por web</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">1178380001</td>
                         <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">-</td>
-                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">24hrs</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">L a V 08 a 20hrs</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Whatsapp - Camaras compradas por web</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">1178380001</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">0800-199-4663 op: 2</td>
+                        <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">L a V 08 a 20hrs</td>
                         <td className="border-t-2 border-b-2 border-gray-200 w-10 text-center">
                         </td>
                     </tr>
@@ -85,6 +93,7 @@ function MediosDeContactos(){
                 </table>
                 </div>
             </div>
+            <br/>
         </section>
     )
 }
